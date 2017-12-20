@@ -16,12 +16,11 @@ RUN dpkg --install /tmp/1c-enterprise$PLATFORM_VERSION-common_${SERVER_VERSION}_
   && dpkg --install /tmp/1c-enterprise$PLATFORM_VERSION-ws_${SERVER_VERSION}_amd64.deb 2> /dev/null \
   && rm /tmp/*.deb
 
-RUN mkdir /data
-
-VOLUME /data
-
 COPY container/httpd.conf /usr/local/apache2/conf/httpd.conf
 COPY container/webinst /usr/local/sbin/webinst
 COPY container/index.html /usr/local/apache2/htdocs/index.html
 
+RUN mkdir /data
+
+VOLUME /data
 VOLUME /usr/local/apache2/conf
