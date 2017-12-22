@@ -53,6 +53,10 @@ docker-1c-ws -- это веб-сервер (Apache 2.4) для 1С:Предпр�
 
     docker rm -f 1c-ws
 
+Удалите образ:
+
+    docker rmi alexanderfefelov/1c-ws
+
 :fire: Удалите данные:
 
     docker volume rm 1c-ws-data

@@ -19,6 +19,7 @@ RUN dpkg --install /tmp/1c-enterprise$PLATFORM_VERSION-common_${SERVER_VERSION}_
 COPY container/httpd.conf /usr/local/apache2/conf/httpd.conf
 COPY container/webinst /usr/local/sbin/webinst
 COPY container/index.html /usr/local/apache2/htdocs/index.html
+COPY container/GitHub-Mark-32px.png /usr/local/apache2/htdocs/GitHub-Mark-32px.png
 
 RUN mkdir /data
 
