@@ -33,11 +33,11 @@ docker-1c-ws -- это веб-сервер (Apache 2.4) для 1С:Предпр�
 
 Для создания/удаления публикации запустите утилиту `webinst` в контейнере:
 
-    docker exec 1c-ws webinst -publish -apache24 ...ДРУГИЕ ПАРАМЕТРЫ... -confPath /usr/local/apache2/conf/httpd.conf
+    docker exec 1c-ws webinst -publish -apache24 ...ДРУГИЕ ПАРАМЕТРЫ... -confPath /httpd.conf
 
 или
 
-    docker exec 1c-ws webinst -delete -apache24 ...ДРУГИЕ ПАРАМЕТРЫ... -confPath /usr/local/apache2/conf/httpd.conf
+    docker exec 1c-ws webinst -delete -apache24 ...ДРУГИЕ ПАРАМЕТРЫ... -confPath /httpd.conf
 
 При этом физический каталог следует указывать внутри каталога `/data`, например `/data/demo`.
 
